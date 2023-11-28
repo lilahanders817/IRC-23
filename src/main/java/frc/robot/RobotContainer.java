@@ -20,7 +20,7 @@ public class RobotContainer {
   Arm arm = new Arm();
 
   public RobotContainer() {
-    drivetrain.setDefaultCommand(new InstantCommand(() -> drivetrain.drive(leftJoystick.getY(), rightJoystick.getY())));
+    drivetrain.setDefaultCommand(new InstantCommand(() -> drivetrain.drive(leftJoystick.getY(), rightJoystick.getY()), drivetrain));
     configureButtonBindings();
   }
 
